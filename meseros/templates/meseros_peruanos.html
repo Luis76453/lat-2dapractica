@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+    <title>Lista de Meseros peruanos</title>
+{% endblock %}
+
+{% block table_content %}
+    <h1>Lista de meseros peruanos menores de 30 años</h1>
+    {% for mesero in data %}
+    <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ mesero.nombre }}</td>
+        <td>{{ mesero.nacionalidad }}</td>
+        <td>{{ mesero.edad }}</td>
+    </tr>
+    {% endfor %}
+{% endblock %}
