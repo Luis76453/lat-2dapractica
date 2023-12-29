@@ -12,6 +12,8 @@
         <td>{{ mesero.nombre }}</td>
         <td>{{ mesero.nacionalidad }}</td>
         <td>{{ mesero.edad }}</td>
+        <td> <a class="btn btn-warning" href="{% url 'meseros_update_vc' mesero.id %}" role="button">Editar</a> </td>
+        <td> <a class="btn btn-danger" href="{% url 'meseros_delete' mesero.id %}" role="button">Eliminar</a> </td>
     </tr>
     {% endfor %}
 {% endblock %}

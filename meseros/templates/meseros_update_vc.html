@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Mesero</title>
+
+</head>
+<body>
+
+    <h1>Editar Mesero</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Cambios</button>
+        <a href="{% url 'meseros_list' %}">Cancelar</a>
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar Mesero</title>
+
+</head>
+<body>
+
+    <h1>¿Estas seguro de eliminar este mesero?</h1>
+
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar Eliminacion</button>
+        <a href="{% url 'meseros_list' %}">Cancelar</a>
+    </form>
+
+
+</body>
+</html>

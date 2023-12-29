@@ -1,0 +1,18 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+    <title>Lista de Meseros peruanos</title>
+{% endblock %}
+
+{% block table_content %}
+    <h1>Lista de meseros de procedencia peruana</h1>
+    {% for mesero in object_list %}
+    <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ mesero.nombre }}</td>
+        <td>{{ mesero.nacionalidad }}</td>
+        <td>{{ mesero.edad }}</td>
+    </tr>
+    {% endfor %}
+{% endblock %}
+
